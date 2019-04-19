@@ -1,0 +1,190 @@
+fileFormatVersion: 2
+guid: 54a3bdb73e96d1a488f26c3cfe9d3246
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Map_Boole_Cube_1
+    100002: Map_Boole_Cube_3
+    100004: Map_Cube1
+    100006: Map_Cube_2
+    100008: Mur__Mur_D_fonc_
+    100010: Mur__Mur_entier_
+    100012: //RootNode
+    100014: Pi_ge_Cube
+    100016: Pi_ge_Pointe_Neutre_Sym_trie_1_Pointe2_Cone1
+    100018: Pi_ge_Pointe_Neutre_Sym_trie_1_Pointe2_Cone_11
+    100020: Pi_ge_Pointe_Neutre_Sym_trie_1_Pointe2_Cone_21
+    100022: Pi_ge_Pointe_Neutre_Sym_trie_2_Pointe1_Cone
+    100024: Pi_ge_Pointe_Neutre_Sym_trie_2_Pointe1_Cone_1
+    100026: Pi_ge_Pointe_Neutre_Sym_trie_2_Pointe1_Cone_2
+    100028: Pi_ge_Pointe_Neutre_Sym_trie_Pointe3_Cone2
+    100030: Pi_ge_Pointe_Neutre_Sym_trie_Pointe3_Cone_12
+    100032: Pi_ge_Pointe_Neutre_Sym_trie_Pointe3_Cone_22
+    400000: Map_Boole_Cube_1
+    400002: Map_Boole_Cube_3
+    400004: Map_Cube1
+    400006: Map_Cube_2
+    400008: Mur__Mur_D_fonc_
+    400010: Mur__Mur_entier_
+    400012: //RootNode
+    400014: Pi_ge_Cube
+    400016: Pi_ge_Pointe_Neutre_Sym_trie_1_Pointe2_Cone1
+    400018: Pi_ge_Pointe_Neutre_Sym_trie_1_Pointe2_Cone_11
+    400020: Pi_ge_Pointe_Neutre_Sym_trie_1_Pointe2_Cone_21
+    400022: Pi_ge_Pointe_Neutre_Sym_trie_2_Pointe1_Cone
+    400024: Pi_ge_Pointe_Neutre_Sym_trie_2_Pointe1_Cone_1
+    400026: Pi_ge_Pointe_Neutre_Sym_trie_2_Pointe1_Cone_2
+    400028: Pi_ge_Pointe_Neutre_Sym_trie_Pointe3_Cone2
+    400030: Pi_ge_Pointe_Neutre_Sym_trie_Pointe3_Cone_12
+    400032: Pi_ge_Pointe_Neutre_Sym_trie_Pointe3_Cone_22
+    2100000: Map_Boole_Cube_1Mat
+    2100002: Map_Boole_Cube_3Mat
+    2100004: Map_Cube1Mat
+    2100006: Map_Cube_2Mat
+    2100008: Mur__Mur_D_fonc_Mat
+    2100010: Mur__Mur_entier_Mat
+    2100012: Pi_ge_CubeMat
+    2100014: Pi_ge_Pointe_Neutre_Sym_trie_1_Pointe2_Cone1Mat
+    2100016: Pi_ge_Pointe_Neutre_Sym_trie_1_Pointe2_Cone_11Mat
+    2100018: Pi_ge_Pointe_Neutre_Sym_trie_1_Pointe2_Cone_21Mat
+    2100020: Pi_ge_Pointe_Neutre_Sym_trie_2_Pointe1_ConeMat
+    2100022: Pi_ge_Pointe_Neutre_Sym_trie_2_Pointe1_Cone_1Mat
+    2100024: Pi_ge_Pointe_Neutre_Sym_trie_2_Pointe1_Cone_2Mat
+    2100026: Pi_ge_Pointe_Neutre_Sym_trie_Pointe3_Cone2Mat
+    2100028: Pi_ge_Pointe_Neutre_Sym_trie_Pointe3_Cone_12Mat
+    2100030: Pi_ge_Pointe_Neutre_Sym_trie_Pointe3_Cone_22Mat
+    2300000: Map_Boole_Cube_1
+    2300002: Map_Boole_Cube_3
+    2300004: Map_Cube1
+    2300006: Map_Cube_2
+    2300008: Mur__Mur_D_fonc_
+    2300010: Mur__Mur_entier_
+    2300012: Pi_ge_Cube
+    2300014: Pi_ge_Pointe_Neutre_Sym_trie_1_Pointe2_Cone1
+    2300016: Pi_ge_Pointe_Neutre_Sym_trie_1_Pointe2_Cone_11
+    2300018: Pi_ge_Pointe_Neutre_Sym_trie_1_Pointe2_Cone_21
+    2300020: Pi_ge_Pointe_Neutre_Sym_trie_2_Pointe1_Cone
+    2300022: Pi_ge_Pointe_Neutre_Sym_trie_2_Pointe1_Cone_1
+    2300024: Pi_ge_Pointe_Neutre_Sym_trie_2_Pointe1_Cone_2
+    2300026: Pi_ge_Pointe_Neutre_Sym_trie_Pointe3_Cone2
+    2300028: Pi_ge_Pointe_Neutre_Sym_trie_Pointe3_Cone_12
+    2300030: Pi_ge_Pointe_Neutre_Sym_trie_Pointe3_Cone_22
+    3300000: Map_Boole_Cube_1
+    3300002: Map_Boole_Cube_3
+    3300004: Map_Cube1
+    3300006: Map_Cube_2
+    3300008: Mur__Mur_D_fonc_
+    3300010: Mur__Mur_entier_
+    3300012: Pi_ge_Cube
+    3300014: Pi_ge_Pointe_Neutre_Sym_trie_1_Pointe2_Cone1
+    3300016: Pi_ge_Pointe_Neutre_Sym_trie_1_Pointe2_Cone_11
+    3300018: Pi_ge_Pointe_Neutre_Sym_trie_1_Pointe2_Cone_21
+    3300020: Pi_ge_Pointe_Neutre_Sym_trie_2_Pointe1_Cone
+    3300022: Pi_ge_Pointe_Neutre_Sym_trie_2_Pointe1_Cone_1
+    3300024: Pi_ge_Pointe_Neutre_Sym_trie_2_Pointe1_Cone_2
+    3300026: Pi_ge_Pointe_Neutre_Sym_trie_Pointe3_Cone2
+    3300028: Pi_ge_Pointe_Neutre_Sym_trie_Pointe3_Cone_12
+    3300030: Pi_ge_Pointe_Neutre_Sym_trie_Pointe3_Cone_22
+    4300000: Map_Boole_Cube_1
+    4300002: Map_Boole_Cube_3
+    4300004: Map_Cube1
+    4300006: Map_Cube_2
+    4300008: Mur__Mur_D_fonc_
+    4300010: Mur__Mur_entier_
+    4300012: Pi_ge_Cube
+    4300014: Pi_ge_Pointe_Neutre_Sym_trie_1_Pointe2_Cone1
+    4300016: Pi_ge_Pointe_Neutre_Sym_trie_1_Pointe2_Cone_11
+    4300018: Pi_ge_Pointe_Neutre_Sym_trie_1_Pointe2_Cone_21
+    4300020: Pi_ge_Pointe_Neutre_Sym_trie_2_Pointe1_Cone
+    4300022: Pi_ge_Pointe_Neutre_Sym_trie_2_Pointe1_Cone_1
+    4300024: Pi_ge_Pointe_Neutre_Sym_trie_2_Pointe1_Cone_2
+    4300026: Pi_ge_Pointe_Neutre_Sym_trie_Pointe3_Cone2
+    4300028: Pi_ge_Pointe_Neutre_Sym_trie_Pointe3_Cone_12
+    4300030: Pi_ge_Pointe_Neutre_Sym_trie_Pointe3_Cone_22
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
