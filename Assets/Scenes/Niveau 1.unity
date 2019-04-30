@@ -522,7 +522,7 @@ MonoBehaviour:
   currentValue: 0
   maxOpenValue: 30
   door: {fileID: 1304747589}
-  opening: 0
+  opening: 1
   closing: 0
 --- !u!1 &519420028
 GameObject:
