@@ -10,6 +10,7 @@ public class BlocsGenerator : MonoBehaviour
     public GameObject eclairage;
 
     private GameObject[] tableauDesCopiesDeBlocs = new GameObject[30];
+    private GameObject[] monstres;
   
     private int parcoursTableau = 0;
   
@@ -23,7 +24,7 @@ public class BlocsGenerator : MonoBehaviour
     void Start()
     {
         tableauDeBlocs = GameObject.FindGameObjectsWithTag("Blocs");
-     
+        monstres = GameObject.FindGameObjectsWithTag("Enemy");
      }
 
 // Update is called once per frame
@@ -44,12 +45,19 @@ void Update()
                     tableauDesCopiesDeBlocs[parcoursTableau % 30] = Instantiate(eclairage, new Vector3(0.0f, 0.0f, zLastBlocCenter), Quaternion.identity);
                     parcoursTableau++;
                 }
+                int monstreNumberAdded = Random.Range(0, monstres.Length - 1);
+                Instantiate(monstres[monstreNumberAdded], new Vector3(Random.Range(-1.0f, 1.0f), -0.6f, zLastBlocCenter), Quaternion.identity);
+                    
+                
                 
             }
             Destroy(tableauDesCopiesDeBlocs[parcoursTableau % 30]);
             tableauDesCopiesDeBlocs[parcoursTableau % 30] = Instantiate(spot, new Vector3(0.0f, 0.0f, zLastBlocCenter), Quaternion.identity);
             parcoursTableau++;
-        }
+
+            
+                
+            }
 
     }
 }

@@ -14,6 +14,7 @@ public class Personnage1Controller : MonoBehaviour
 
     public float maxVSpeed=10f;
     public float maxHSpeed=10f;
+    private float multiplicateur = 1.0f;
     private readonly int m_HSpeed = Animator.StringToHash("Speed");
     private readonly int m_Attack = Animator.StringToHash("Attacking");
 
@@ -84,7 +85,7 @@ public class Personnage1Controller : MonoBehaviour
             //Debug.Log(Input.GetAxis("Horizontal"));
         }
 
-        Move(Input.GetAxis("Horizontal"), Input.GetKeyDown("space"));
+        Move(Input.GetAxis("Horizontal"), false);
 
         //Attacking 
 
@@ -115,13 +116,14 @@ public class Personnage1Controller : MonoBehaviour
 
     private void Move(float x, bool jump)
     {
+        multiplicateur = multiplicateur * 1.0005f;
         if (jump)
         {
-            m_RigidBody.velocity = new Vector3(x * maxHSpeed,  maxVSpeed, 0.5f);
+            m_RigidBody.velocity = new Vector3(x * maxHSpeed,  maxVSpeed, 0.5f*multiplicateur);
         }
         else
         {
-            m_RigidBody.velocity = new Vector3(x * maxHSpeed, 0, 0.5f);
+            m_RigidBody.velocity = new Vector3(x * maxHSpeed, 0, 0.5f*multiplicateur);
         }
         
  
@@ -166,7 +168,7 @@ public class Personnage1Controller : MonoBehaviour
 
     protected void Projectile()
     {
-        Vector2 posStart = m_PointDepart.transform.position;
+        Vector3 posStart = m_PointDepart.transform.position;
 
         GameObject Bababouche = Instantiate(BaboucheSprite, posStart, Quaternion.identity); // Create a new game object from the prefab
 

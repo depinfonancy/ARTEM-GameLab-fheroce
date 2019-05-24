@@ -14,6 +14,7 @@ public class Personnage2Controller : MonoBehaviour
 
     public float maxVSpeed;
     public float maxHSpeed;
+    private float multiplicateur = 1.0f;
 
 
 
@@ -72,7 +73,7 @@ public class Personnage2Controller : MonoBehaviour
     private void FixedUpdate()
     {
 
-        Move(Input.GetAxis("Vertical"), Input.GetKeyDown("tab"));
+        Move(Input.GetAxis("Vertical"), false);
         //Attacking 
         /*if (Input.GetButtonDown("Fire1"))
         {
@@ -87,14 +88,15 @@ public class Personnage2Controller : MonoBehaviour
 
     private void Move(float x, bool jump)
     {
+        multiplicateur = (multiplicateur * 1.0005f);
         //Debug.Log("Là");
         if (jump)
         {
-            m_RigidBody.velocity = new Vector3(x * maxHSpeed, maxVSpeed, 0.5f);
+            m_RigidBody.velocity = new Vector3(x * maxHSpeed, maxVSpeed, 0.5f*multiplicateur);
         }
         else
         {
-            m_RigidBody.velocity = new Vector3(x * maxHSpeed, 0, 0.5f);
+            m_RigidBody.velocity = new Vector3(x * maxHSpeed, 0, 0.5f* multiplicateur);
         }
         //Debug.Log(m_RigidBody.velocity);
         
