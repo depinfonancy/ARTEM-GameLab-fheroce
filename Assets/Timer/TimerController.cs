@@ -6,31 +6,21 @@ using System.Threading;
 
 public class TimerController : MonoBehaviour
 {
-    public int timeLeft = 0; //Seconds Overall
+    public Transform Player1;
     public Text countdown; //UI Text Object
+    public float score = 0f;
     void Start()
     {
-        /*StartCoroutine("LoseTime");
-        Time.timeScale = 1; //Just making sure that the timeScale is right*/
+
     }
 
     private void Awake()
     {
-        timeLeft = 0;
-        StartCoroutine("LoseTime");
-        Time.timeScale = 1;
+
     }
     void Update()
     {
-        countdown.text = ("" + timeLeft); //Showing the Score on the Canvas
-    }
-    //Simple Coroutine
-    IEnumerator LoseTime()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(1);
-            timeLeft = timeLeft + 1;
-        }
+        score = Player1.position.z;
+        countdown.text = "Score :" + (Player1.position.z); //Showing the Score on the Canvas
     }
 }

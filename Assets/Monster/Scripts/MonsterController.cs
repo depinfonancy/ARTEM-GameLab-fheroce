@@ -39,7 +39,7 @@ public class MonsterController : MonoBehaviour
 
     private void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag == "Player")
+        if (col.gameObject.tag == "Player1" || col.gameObject.tag == "Player2")
         {
             print("Attention à toi");
             Destroy(m_Rigidbody.gameObject);
