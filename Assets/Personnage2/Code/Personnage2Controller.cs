@@ -48,6 +48,15 @@ public class Personnage2Controller : MonoBehaviour
     public GameObject Menue;
     public Text scorefinal;
 
+    //Collision avec les murs 
+    public float minx;
+    public float maxx;
+
+    //Rolling carpet 
+    private bool on_rolling_carpet = false;
+    private int times_on_roll = 5;
+
+
     private void Update()
     {
         CheckAttaque();
@@ -106,7 +115,25 @@ public class Personnage2Controller : MonoBehaviour
             m_RigidBody.velocity = new Vector3(x * maxHSpeed, 0, 0.5f*multiplicateur);
         }
         //Debug.Log(m_RigidBody.velocity);
-        
+        if (m_RigidBody.position.x > maxx)
+        {
+            m_RigidBody.position = new Vector3(maxx, m_RigidBody.position.y, m_RigidBody.position.z);
+        }
+        if (m_RigidBody.position.x < minx)
+        {
+            m_RigidBody.position = new Vector3(minx, m_RigidBody.position.y, m_RigidBody.position.z);
+        }
+        if (on_rolling_carpet & times_on_roll > 0)
+        {
+            m_RigidBody.AddForce(new Vector3(1000, 0, 0));
+            times_on_roll -= 1;
+        }
+
+        if (times_on_roll == 0)
+        {
+            on_rolling_carpet = false;
+        }
+
     }
 
 
@@ -134,6 +161,20 @@ public class Personnage2Controller : MonoBehaviour
     private void OnTriggerEnter(Collider coll)
     {
         if (coll.gameObject.tag == "Enemy")
+        {
+            life = life - 1;
+        }
+        if (coll.gameObject.tag == "RollingCarpet")
+        {
+            Debug.Log("TOUCHED ROLLING CARPET");
+            on_rolling_carpet = true;
+            times_on_roll = 12;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
         {
             life = life - 1;
         }
