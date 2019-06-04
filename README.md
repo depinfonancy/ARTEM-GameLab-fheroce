@@ -7,9 +7,9 @@ Génération du décor : Nathan
 
 Résolution du bug du décor : Nathan 
 
-Génération des monstres : Pierrick et Mathieu 
+Génération des monstres : Pierrick, Mathieu et Thomas
 
-Animation des monstres : Pierrick et Mathieu
+Animation des monstres : Pierrick, Mathieu et Thomas
 
 Effets particulaires : Boris 
 
