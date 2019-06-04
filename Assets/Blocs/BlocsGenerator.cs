@@ -12,7 +12,7 @@ public class BlocsGenerator : MonoBehaviour
 
     private int longueurTableau = 36;
     private GameObject[] tableauDesCopiesDeBlocs = new GameObject[36];
-    public GameObject[] monstres = new GameObject[6];
+    public GameObject[] monstres = new GameObject[8];
   
     private int parcoursTableau = 0;
   
