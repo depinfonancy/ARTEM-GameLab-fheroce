@@ -15,7 +15,7 @@ public class Personnage1Controller : MonoBehaviour
 
     public float maxVSpeed=10f;
     public float maxHSpeed=10f;
-    private float multiplicateur = 1.0f;
+    private float multiplicateur = 1.0010f;
     private readonly int m_HSpeed = Animator.StringToHash("Speed");
     private readonly int m_Attack = Animator.StringToHash("Attacking");
 
@@ -128,7 +128,7 @@ public class Personnage1Controller : MonoBehaviour
 
     private void Move(float x, bool jump)
     {
-        multiplicateur = multiplicateur * 1.001f;
+        multiplicateur = multiplicateur * 1.0001f;
         if (jump)
         {
             m_RigidBody.velocity = new Vector3(x * maxHSpeed,  maxVSpeed, 0.5f*multiplicateur);
@@ -201,13 +201,15 @@ public class Personnage1Controller : MonoBehaviour
         Bababouche.GetComponent<Rigidbody>().velocity = new Vector3(0,BaboucheSpeed/2f,BaboucheSpeed);
     }
 
-    private void OnTriggerEnter(Collider coll)
+    private void OnTriggerStay(Collider coll)
     {
-        if (coll.gameObject.tag == "Enemy")
+        if (coll.gameObject.tag == "Rolling")
         {
-            Looselife();
+            m_RigidBody.AddForce(new Vector3(-700, 0, 0));
         }
     }
+
+   
 
     private void OnCollisionEnter(Collision collision)
     {

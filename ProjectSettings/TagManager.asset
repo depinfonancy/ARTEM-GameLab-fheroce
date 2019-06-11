@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Blocs
+  - Player2
+  - Player1
+  - Rolling
   layers:
   - Default
   - TransparentFX

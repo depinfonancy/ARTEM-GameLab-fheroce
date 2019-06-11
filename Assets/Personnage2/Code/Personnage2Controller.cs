@@ -99,7 +99,7 @@ public class Personnage2Controller : MonoBehaviour
 
     private void Move(float x, bool jump)
     {
-        multiplicateur = multiplicateur * 1.001f; 
+        multiplicateur = multiplicateur * 1.0001f; 
         //Debug.Log("Là");
         if (jump)
         {
@@ -153,11 +153,11 @@ public class Personnage2Controller : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider coll)
+    private void OnTriggerStay(Collider coll)
     {
-        if (coll.gameObject.tag == "Enemy")
+        if (coll.gameObject.tag == "Rolling")
         {
-            life = life - 1;
+            m_RigidBody.AddForce(new Vector3(700, 0, 0));
         }
     }
 
