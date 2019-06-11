@@ -46,8 +46,15 @@ void Update()
                     parcoursTableau++;
                 }
                 int monstreNumberAdded = Random.Range(0, monstres.Length - 1);
-                Instantiate(monstres[monstreNumberAdded], new Vector3(Random.Range(-1.0f, 1.0f), -0.6f, zLastBlocCenter), Quaternion.identity);
-                    
+				
+				if (monstreNumberAdded == 5)
+				{
+					Instantiate(monstres[monstreNumberAdded], new Vector3(Random.Range(-1.0f, 1.0f), 0.0f, zLastBlocCenter), Quaternion.identity);
+				}
+				else
+				{
+					Instantiate(monstres[monstreNumberAdded], new Vector3(Random.Range(-1.0f, 1.0f), -0.6f, zLastBlocCenter), Quaternion.identity);
+				}
                 
                 
             }

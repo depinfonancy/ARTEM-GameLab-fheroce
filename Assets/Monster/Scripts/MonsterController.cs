@@ -8,17 +8,23 @@ public class MonsterController : MonoBehaviour
     
     Vector3 Movement;
     public float speed;
+	public float h_coef = 1.0f ;
+	private float hspeed ;
     private GameObject Player1;
     private GameObject Player2;
     private Vector3 position1;
     private Vector3 position2;
-
+	private float amplitude ;
+	private float xCenter ;
+	private Vector3 orientation ;
     // Start is called before the first frame update
     void Start()
     {
+		amplitude = .4f ;
         m_Rigidbody = GetComponent<Rigidbody>();
-        
-        Movement = new Vector3(0, 0, -speed);
+		xCenter = m_Rigidbody.transform.position.x ;
+		hspeed = h_coef * speed ;
+        Movement = new Vector3(hspeed, 0, -speed);
         Player1 = GameObject.Find("Personnage");
         Player2 = GameObject.Find("Personnage2 Variant");
     }
@@ -32,7 +38,23 @@ public class MonsterController : MonoBehaviour
         if(transform.position.z < position1.z -10.0f && transform.position.z < position2.z -10.0f)
         {
             Destroy(transform.gameObject);
-        }       
+        }
+		if ((m_Rigidbody.transform.position.x >= (xCenter + amplitude)) || (m_Rigidbody.transform.position.x > 1))
+		{
+			Movement = new Vector3(- hspeed, 0, -speed) ;
+			orientation = m_Rigidbody.transform.localScale ;
+			orientation.x = - orientation.x ;
+			m_Rigidbody.transform.localScale = orientation ;
+		}
+		if ((m_Rigidbody.transform.position.x <= (xCenter - amplitude)) || (m_Rigidbody.transform.position.x < -1))
+		{
+			Movement = new Vector3(hspeed, 0, -speed) ;
+			orientation = m_Rigidbody.transform.localScale ;
+			orientation.x = - orientation.x ;
+			m_Rigidbody.transform.localScale = orientation ;
+		}
+			
+		
         
     }
 
