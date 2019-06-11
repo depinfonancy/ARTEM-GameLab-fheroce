@@ -44,7 +44,10 @@ public class Personnage1Controller : MonoBehaviour
     //Game Over Menue 
     public GameObject Menue;
     public Text scorefinal;
-    
+
+    // Collisions avec les murs 
+    private float minx = -0.95f;
+    private float maxx = 0.95f;
 
     void Start()
     {
@@ -134,6 +137,16 @@ public class Personnage1Controller : MonoBehaviour
         {
             m_RigidBody.velocity = new Vector3(x * maxHSpeed, 0, 0.5f*multiplicateur);
         }
+
+        if (m_RigidBody.position.x < minx)
+        {
+            m_RigidBody.position = new Vector3(minx, m_RigidBody.position.y, m_RigidBody.position.z);
+        }
+
+        if (m_RigidBody.position.x > maxx)
+        {
+            m_RigidBody.position = new Vector3(maxx, m_RigidBody.position.y, m_RigidBody.position.z);
+        }
         
  
         m_Animator.SetFloat(m_HSpeed,Mathf.Abs(x));
@@ -193,6 +206,14 @@ public class Personnage1Controller : MonoBehaviour
         if (coll.gameObject.tag == "Enemy")
         {
             Looselife();
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            life = life - 1;
         }
     }
 

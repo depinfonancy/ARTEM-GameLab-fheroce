@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.71681476, g: 0.71681476, b: 0.81163543, a: 1}
+  m_IndirectSpecularColor: {r: 0.73799205, g: 0.7405909, b: 0.8327426, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -119,16 +119,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 598912138}
     m_Modifications:
-    - target: {fileID: 2652552663706617701, guid: 68a47a4f96187504aa9c4afb92628b41,
-        type: 3}
-      propertyPath: m_Name
-      value: "Train\xE9e Personnage f\xE9minin"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2652552663706617701, guid: 68a47a4f96187504aa9c4afb92628b41,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2652552663706617702, guid: 68a47a4f96187504aa9c4afb92628b41,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -198,6 +188,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2652552663706617701, guid: 68a47a4f96187504aa9c4afb92628b41,
+        type: 3}
+      propertyPath: m_Name
+      value: "Train\xE9e Personnage f\xE9minin"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2652552663706617701, guid: 68a47a4f96187504aa9c4afb92628b41,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2652552663706617703, guid: 68a47a4f96187504aa9c4afb92628b41,
         type: 3}
@@ -660,7 +660,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &407617777
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1852,11 +1852,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1770310728}
     m_Modifications:
-    - target: {fileID: 2652552663706617701, guid: 68a47a4f96187504aa9c4afb92628b41,
-        type: 3}
-      propertyPath: m_Name
-      value: "Train\xE9e Personnage f\xE9minin"
-      objectReference: {fileID: 0}
     - target: {fileID: 2652552663706617702, guid: 68a47a4f96187504aa9c4afb92628b41,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1926,6 +1921,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2652552663706617701, guid: 68a47a4f96187504aa9c4afb92628b41,
+        type: 3}
+      propertyPath: m_Name
+      value: "Train\xE9e Personnage f\xE9minin"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68a47a4f96187504aa9c4afb92628b41, type: 3}
@@ -2519,7 +2519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 551693444, guid: 7645e15b2f7be3f478b2049df33d596c, type: 3}
       propertyPath: BaboucheSpeed
-      value: 30
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 551693444, guid: 7645e15b2f7be3f478b2049df33d596c, type: 3}
       propertyPath: life
@@ -2574,16 +2574,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 110933675}
     m_Modifications:
-    - target: {fileID: 3975231533049094752, guid: 1780983eda3acd34e9854b4f00718a7b,
-        type: 3}
-      propertyPath: m_Name
-      value: "Nu\xE9e puante"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3975231533049094752, guid: 1780983eda3acd34e9854b4f00718a7b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3975231533049094781, guid: 1780983eda3acd34e9854b4f00718a7b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2653,6 +2643,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3975231533049094752, guid: 1780983eda3acd34e9854b4f00718a7b,
+        type: 3}
+      propertyPath: m_Name
+      value: "Nu\xE9e puante"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3975231533049094752, guid: 1780983eda3acd34e9854b4f00718a7b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3975231533049094782, guid: 1780983eda3acd34e9854b4f00718a7b,
         type: 3}
@@ -2917,12 +2917,12 @@ PrefabInstance:
     - target: {fileID: 2378133390376661442, guid: c98c03dc1cc47ba45b617fab14ed1783,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.05
+      value: 0.025
       objectReference: {fileID: 0}
     - target: {fileID: 2378133390376661442, guid: c98c03dc1cc47ba45b617fab14ed1783,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.05
+      value: 0.025
       objectReference: {fileID: 0}
     - target: {fileID: 2378133390376661442, guid: c98c03dc1cc47ba45b617fab14ed1783,
         type: 3}
