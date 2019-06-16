@@ -7,6 +7,7 @@ public class MonsterController : MonoBehaviour
     private Rigidbody m_Rigidbody;
     
     Vector3 Movement;
+    public bool hasAttack = false;
     public float speed;
 	public float h_coef = 1.0f ;
 	private float hspeed ;
@@ -17,6 +18,14 @@ public class MonsterController : MonoBehaviour
 	private float amplitude ;
 	private float xCenter ;
 	private Vector3 orientation ;
+
+    //Coroutine
+    protected Coroutine m_MonsterAttack;
+    protected float m_NextShotTime = 0.5f;
+    protected float m_DeltaTime = 1 / 2f;
+    public float AttackSpeed = 10f;
+    public GameObject BaboucheSprite;
+    public Transform m_PointDepart;
     // Start is called before the first frame update
     void Start()
     {
@@ -65,6 +74,47 @@ public class MonsterController : MonoBehaviour
             Destroy(m_Rigidbody.gameObject);
         }
     
+    }
+
+    //Attaque du mosntre
+    protected IEnumerator Shoot()
+    {
+        while (hasAttack)
+        {
+            yield return new WaitForSeconds(0.5f);
+            if (Time.time >= m_NextShotTime)
+            {
+                Projectile();
+                m_NextShotTime = Time.time + m_DeltaTime;
+            }
+            yield return new WaitForFixedUpdate();
+            //yield return null;
+        }
+    }
+    public void CheckAttaque()
+    {
+        if (hasAttack)
+        {
+            
+            m_MonsterAttack = StartCoroutine(Shoot());
+
+        }
+
+        
+    }
+
+
+    protected void Projectile()
+    {
+        Vector3 posStart = m_PointDepart.transform.position;
+
+        GameObject Attack = Instantiate(BaboucheSprite, posStart, Quaternion.identity); // Create a new game object from the prefab
+
+        Transform t = Attack.GetComponent<Transform>();
+
+        Attack.SetActive(true); // ensure the new object is Active to be visible within the scene
+
+        Attack.GetComponent<Rigidbody>().velocity = new Vector3(0, AttackSpeed / 2f, - AttackSpeed);
     }
 
 }
