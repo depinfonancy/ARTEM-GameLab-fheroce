@@ -17,7 +17,7 @@ public class MonsterAttack : MonoBehaviour
 
     void OnTriggerEnter(Collider coll)
     {
-        if (col.gameObject.tag == "Player1" || col.gameObject.tag == "Player2")
+        if (coll.gameObject.tag == "Player1" || coll.gameObject.tag == "Player2")
         {
             Destroy(coll.gameObject);
             Explode();
